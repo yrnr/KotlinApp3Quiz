@@ -23,15 +23,19 @@ class TitleFragment : Fragment() {
 //              view: View -> view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
 //        }
 
-        binding.playButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(
-                    R.id.action_titleFragment_to_gameFragment)  )
+//        binding.playButton.setOnClickListener(
+//            Navigation.createNavigateOnClickListener(
+//                    R.id.action_titleFragment_to_gameFragment)  )
+
+        binding.playButton.setOnClickListener { v: View ->
+            v.findNavController().navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
+        }
         return binding.root
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        inflater?.inflate(R.menu.about_menu, menu)
+        inflater.inflate(R.menu.about_menu, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
