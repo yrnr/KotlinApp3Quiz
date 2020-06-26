@@ -16,6 +16,7 @@
 
 package com.example.android.navigation
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
@@ -47,6 +48,11 @@ class GameWonFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.winner_menu, menu)
+        // check if the activity resolves
+        if (null == getShareIntent().resolveActivity(Activity!!.packageManager)) {
+            // hide the menu item if it doesn't resolve
+            menu?.findItem(R.id.share).setVisible(false)
+        }
     }
 
     private fun getShareIntent(): Intent{
