@@ -1,4 +1,4 @@
-Beginner's app. Made slight changes to this app, to create a simple quiz-app for my 6 year old kid to play on TV with Amazon Fire TV stick.
+Beginner's app. Made slight changes to create a simple quiz for my 6 year old kid to play on TV with Amazon Fire TV stick.
 What follows in this README is a copy of Udemy lession
 # Navigation
 
